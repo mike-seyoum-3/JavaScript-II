@@ -42,18 +42,53 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
 }
+const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+
+const firstItem = (arr, cb) => {
+  cb(arr[0]);
+};
+firstItem(items, firstItem => {
+  console.log(`The first item is ${firstItem}.`);
+});
+
+const getLength = (arr, cb) => {
+  cb(arr.length);
+};
+getLength(items, length => {
+  console.log(`The length of the array is ${length}.`);
+});
+============================================================================
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
 }
-
+const last = (arr, cb) => {
+  cb(arr[arr.length - 1]);
+};
+last(items, lastItem => {
+  console.log(`The last item in the array is ${lastItem}.`);
+});
+==============================================================================
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
-
+const sumNums = (x, y, cb) => {
+  cb(x + y);
+};
+sumNums(20, 30, sum => {
+  console.log(`The sum is ${sum}.`);
+});
+================================================================================
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
+const multiplyNums = (x, y, cb) => {
+  cb(x * y);
+};
+multiplyNums(20, 30, product => {
+  console.log(`The product is ${product}.`);
+});
+=================================================================================
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.

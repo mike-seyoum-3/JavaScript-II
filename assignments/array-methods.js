@@ -60,19 +60,36 @@ const runners = [
 let fullNames = [];
 console.log(fullNames);
 
+runners.forEach(function(runners, i, arr) {
+  fullName.push(` ${runners.first_name} ${runners.last_name} `);
+});
+console.log(fullName);
+
+
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runners' first names in uppercase because the director BECAME DRUNK WITH POWER. Populate an array called `firstNamesAllCaps`. This array will contain just strings.
-let firstNamesAllCaps = [];
-console.log(firstNamesAllCaps);
+let allCaps = [];
+allCaps = runners.map(function(name){
+    return name.first_name.toUpperCase();
+
+})
+console.log(allCaps); 
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
-let runnersLargeSizeShirt = [];
-console.log(runnersLargeSizeShirt);
+let largeShirts = [];
+largeShirts = runners.filter(function(sizeL) {
+    if (sizeL.shirt_size === "L") {}
+    return true;
+})
+console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
-let ticketPriceTotal = 0;
+let ticketPriceTotal = [];
+for (let i = 0; i < runners.length; i++) {
+    ticketPriceTotal.push(runners[i].donation)
+}
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
