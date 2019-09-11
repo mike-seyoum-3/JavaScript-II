@@ -61,7 +61,7 @@ let fullNames = [];
 console.log(fullNames);
 
 runners.forEach(function(runners, i, arr) {
-  fullName.push(` ${runners.first_name} ${runners.last_name} `);
+fullName.push(` ${runners.first_name} ${runners.last_name} `);
 });
 console.log(fullName);
 
